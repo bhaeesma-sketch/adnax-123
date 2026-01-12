@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { Equipment } from '@/data/equipment';
 import { generateWhatsAppUrl, generateEquipmentEnquiryMessage } from '@/lib/whatsapp';
+import EquipmentImage from './EquipmentImage';
 
 interface EquipmentCardProps {
   equipment: Equipment;
@@ -17,19 +17,13 @@ export default function EquipmentCard({ equipment }: EquipmentCardProps) {
 
   return (
     <div className="bg-[#2A2A2A] rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-[#2A2A2A] hover:border-[#F2B705]/50">
-      {/* Image Placeholder */}
-      <div className="relative w-full h-64 bg-[#1A1A1A] flex items-center justify-center">
-        <Image
+      {/* Equipment Image - Optimized for 4K source images */}
+      <div className="relative w-full h-64 bg-[#1A1A1A] flex items-center justify-center overflow-hidden">
+        <EquipmentImage
           src={equipment.image}
-          alt={equipment.name}
-          width={400}
-          height={300}
-          className="object-cover w-full h-full"
-          onError={(e) => {
-            // Fallback to placeholder if image doesn't exist
-            const target = e.target as HTMLImageElement;
-            target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect fill="%232A2A2A" width="400" height="300"/%3E%3Ctext fill="%23B3B3B3" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3E' + equipment.name + '%3C/text%3E%3C/svg%3E';
-          }}
+          alt={`${equipment.name} - ${equipment.category}`}
+          equipmentName={equipment.name}
+          category={equipment.category}
         />
         <div className="absolute top-4 right-4">
           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
