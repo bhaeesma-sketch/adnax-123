@@ -1,0 +1,17 @@
+CURRENT IMAGES FOUND:
+- BACKHOE LOADERS.avif
+- WHEEL LOADER.jpg  
+- SKID STEER.avif
+- TELEHANDLER.webp
+
+PROBLEM: Filenames have spaces and don't match required names
+
+REQUIRED: 12 images with exact names (see data/equipment.ts)
+
+SOLUTION: 
+1. Rename files to remove spaces
+2. Use exact names from equipment data
+3. Copy images multiple times for different equipment items
+4. OR download more specific images
+
+Location: /Users/bhaeesma/Desktop/adnax/public/equipment/
