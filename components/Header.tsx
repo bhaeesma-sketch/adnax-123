@@ -24,15 +24,15 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0E0E0E] border-b border-[#2A2A2A]">
-      <nav className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold font-heading text-white tracking-tight">
-              ADNEX
-            </span>
-          </Link>
+      <header className="sticky top-0 z-50 bg-[#0E0E0E]/95 backdrop-blur-md border-b border-[#2A2A2A] transition-all duration-300">
+        <nav className="container mx-auto px-4 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center space-x-2 group">
+              <span className="text-2xl font-bold font-heading text-white tracking-tight transition-transform duration-300 group-hover:scale-105">
+                ADNEX
+              </span>
+            </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -40,13 +40,16 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-all duration-300 relative group ${
                   isActive(link.href)
                     ? 'text-[#F2B705]'
                     : 'text-[#B3B3B3] hover:text-white'
                 }`}
               >
                 {link.label}
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-[#F2B705] transition-all duration-300 group-hover:w-full ${
+                  isActive(link.href) ? 'w-full' : ''
+                }`}></span>
               </Link>
             ))}
           </div>
