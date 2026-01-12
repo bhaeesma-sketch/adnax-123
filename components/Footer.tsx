@@ -71,11 +71,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Links & Copyright */}
+        {/* Social Links & Copyright - Matching themorfly.com */}
         <div className="border-t border-[#2A2A2A] pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <div className="mb-4 md:mb-0">
-              <p className="text-[#B3B3B3] text-sm mb-4 md:mb-0">
+              <p className="text-[#B3B3B3] text-sm mb-3">
                 Follow us on
               </p>
               <div className="flex space-x-4">
@@ -115,14 +115,15 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="text-center md:text-right">
-              <p className="text-[#B3B3B3] text-sm">
-                Copyright © {currentYear} ADNEX - All Rights Reserved.
-              </p>
-              <p className="text-[#B3B3B3] text-xs mt-2">
-                Powered by ADNEX
-              </p>
-            </div>
+          </div>
+
+          <div className="border-t border-[#2A2A2A] pt-6 text-center">
+            <p className="text-[#B3B3B3] text-sm mb-2">
+              Copyright © {currentYear} ADNEX - All Rights Reserved.
+            </p>
+            <p className="text-[#B3B3B3] text-xs">
+              Powered by ADNEX
+            </p>
           </div>
         </div>
       </div>
