@@ -3,7 +3,7 @@
  * Generates pre-filled WhatsApp messages for equipment enquiries
  */
 
-export const WHATSAPP_NUMBER = '+968XXXXXXXXX'; // Replace with actual WhatsApp Business number
+export const WHATSAPP_NUMBER = '+96898615132'; // ADNEX WhatsApp Business - Adnan
 
 export function generateWhatsAppUrl(message: string): string {
   const encodedMessage = encodeURIComponent(message);

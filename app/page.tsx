@@ -175,7 +175,7 @@ export default function Home() {
                         info@adnex.com
                       </a>
                     </p>
-                    <p>+968 XXXX XXXX</p>
+                    <p>+968 9861 5132</p>
                   </div>
                 </div>
 
